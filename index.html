@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;box-sizing: border-box;
+        }
+        p{
+            width: 70%;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            margin: 200px auto;
+            text-align: justify;
+        }
+        button{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(128, 77, 0);
+            font-size: 30px;
+            display: block;
+            margin: 100px auto;
+        }
+        .pop{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            opacity: 0;
+            transition: 2s;
+            backdrop-filter: blur(3px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >div{
+                width: 400px;
+                height: 250px;
+                background-color: rgb(111, 237, 100);
+            
+                >h6{
+                 font-size: 13px;
+                 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                 justify-content: center;
+                 align-items: center;
+                 margin:40px 20px;
+                }
+                >span{
+                   margin: 10px;
+                   display: flex;
+                   margin-top: 20px;
+                   cursor: pointer;
+                }
+            
+            }
+        }
+        .myClass{
+                top: 0;
+                scale: 1.3;
+                opacity: 1;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="pop">
+       <div>
+        <span onclick="closeIt()">❌</span>
+        <h6>advertisment Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur nesciunt quidem, eius iure, vel nobise suscipit temporibus obcaecati sapiente ullam eos, ratione aperiam.</h6>
+       </div>
+    </div>
+    <button class="btn" onclick="openIt()"> open my modal</button>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, nobis impedit, praesentium incidunt libero temporibus accusamus facere ipsa quibusdam suscipit sint, eius voluptatum repudiandae ullam omnis molestias velit? Ullam, fuga at. Autem aut tenetur quia! Assumenda accusamus amet accusantium at?Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, fugit illo doloribus, debitis fuga qui eos perferendis natus eveniet iure reiciendis molestiae nisi illum non aperiam. Consequatur magni consectetur magnam!</p>
+    
+</body>
+<script>
+    const myPop = document.getElementsByClassName('pop')[0]
+    const openIt = () => {
+        myPop.classList.add('myClass')
+    }
+    const closeIt = () => {
+        myPop.classList.remove('myClass')
+    }
+</script>
+</html>
